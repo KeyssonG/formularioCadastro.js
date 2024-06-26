@@ -1,0 +1,98 @@
+:root {
+    --color-background: #121212;
+    --color-form: #fafafa;
+    --color-header-1: #3acbf0;
+    --color-header-2: #8bb0ff;
+    --color-input: #dfdfdf;
+    --color-button: #00c3ff;
+    --color-error: #ff3b24;
+
+    --font-main: "Poppins", sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main)
+}
+
+body {
+    background: var(--color-background);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    background-color: var(--color-form);
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: 0 3px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /*Oculta mensagem de erro*/
+}
+
+.header {
+    background: linear-gradient(120deg, var(--color-header-1)0%, var(--color-header-2)100%);
+    padding: 24px;
+    text-align: center;
+    color: var(--color-form);
+}
+
+.form {
+    padding: 18px;
+}
+
+.form-content {
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-content label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid var(--color-input);
+}
+
+.form-content a {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form button {
+    background-color: var(--color-button);
+    color: var(--color-form);
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.form-content.error input {
+    border-color: var(--color-error);
+}
+
+/*Define visibilidade e cor da mensagem de erro, é chamado pelo JS*/
+.form-content.error a {
+    color: var(--color-error);
+    visibility: visible;
+}
